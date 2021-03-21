@@ -6,9 +6,9 @@ You can find the preprint at [arXiv](https://arxiv.org/abs/1901.01805).
 
 ### Preparation
 * Download the [BRED dataset](https://zenodo.org/record/3233060) and extract it inside the project.
+* Create a directory "saved_scores" to save the outputs in numpy format.
 
 ### Training
-
 
 
 Train a model using only the skeleton (SEP):
@@ -27,6 +27,10 @@ Combine skeleton and CNN features (feature fusion - Joint-1L)
 
 > python main.py --db babyrobot --epochs 200 --step_size 150 --add_body_dnn --use_cnn_features --num_classes 7 --num_total_iterations=1 --exp_name "JOINT" --optimizer sgd --weight_decay 1e-3 --lr 1e-1 --batch_size 12
 
+
+Combine skeleton and CNN features (Hierarchical training - HMT-3A)
+
+>  python main.py --db babyrobot --epochs 200 --step_size 150 --add_body_dnn --use_cnn_features --num_classes 7 --num_total_iterations=1 --optimizer sgd --weight_decay 1e-3 --lr 1e-1 --batch_size 12 --split_branches --do_fusion --exp_name "HMT-3a"
 
 
 Combine skeleton and CNN features (Hierarchical training - HMT-3B)
