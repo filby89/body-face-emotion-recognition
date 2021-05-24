@@ -7,6 +7,7 @@ You can find the preprint at [arXiv](https://arxiv.org/abs/1901.01805).
 ### Preparation
 * Download the [BRED dataset](https://zenodo.org/record/3233060) and extract it inside the project.
 * Create a directory "saved_scores" to save the outputs in numpy format.
+* Note that there is an error in the annotations.csv file. Replace "spontaneous" in the path with "game" and "acted" with "pre-game" to get the correct paths.
 
 ### Training
 
